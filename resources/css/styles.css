@@ -1,0 +1,37 @@
+/* General Styles */
+
+html {
+    font-family: "Ubuntu Sans", sans-serif;
+    font-size: 62.5%;
+    background-color: rgb(236,236,236);
+}
+
+/* Nav Styles */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    background-color: #9fd3c7;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.navbar-brand, .nav-link {
+    color: #385170 !important;
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ececec;
+    background-color: #142d4c;
+}
