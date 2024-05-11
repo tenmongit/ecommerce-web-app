@@ -26,6 +26,15 @@ nav {
     color: #385170 !important;
 }
 
+/* Hero styles */
+
+div h1 {
+    font-weight: 700;
+    text-align: center;
+    color: #385170;
+}
+
+
 /* Footer Styles */
 footer {
     display: flex;

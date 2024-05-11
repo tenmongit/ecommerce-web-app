@@ -30,27 +30,85 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Login</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Catalogue</a>
+                            </li>
                         </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                          </form>
+                    
                         </div>
                     </div>
                 </nav>
             </div>
         </header>
         <main>
-            <div class="container">
+            <div class="container-fluid">
+                <!-- alert for adding to the cart -->
+                <div class="alert alert-success alert-dismissible fade show" id="addToCartAlert" style="display: none" role="alert">
+                    <strong>Added to Cart!</strong> Your item is added to the cart.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <!-- alert for deleting from the cart-->
+                <div class="alert alert-success alert-dismissible fade show" id="checkoutAlert" style="display: none" role="alert">
+                    <strong>Checkout page is opened in new window!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <!-- starting layout for home page-->
                 <div class="row">
-                    <div class="col-12">
-
+                    <div class="col-12">    
+                    <h1 class="display-3">Our Products on <strong>SALE!</strong></h1>
                     </div>
                 </div>
-            </div>
+                    <button type="button" class="btn btn-primary position-relative">
+                        Cart
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="count">
+                        0
+                        <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </button>
+                    <div class="row row-cols-1 row-cols-md-2 g-4" id="productContainer">
+                     
+                    </div>
+            </div>    
         </main>
         <footer>
             <div>
                 <p>Copyright &copy; 2024</p>
             </div>
         </footer>
+        <script src="resources/scripts/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
     
 </html>
+
+
+<!-- <div class="row" id="productsContainer">
+                        <div class="col-2">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://media.istockphoto.com/id/1428728626/photo/young-man-with-tattoos-near-brick-wall.webp?s=2048x2048&w=is&k=20&c=8QeYkbetVN0Q55TOQ6wYasLnJle8ajrKjlu4HNecETs=" class="card-img-top" alt="black t shirt image">
+                                <div class="card-body">
+                                  <h5 class="card-title">Black T-Shirt <span class="badge text-bg-danger">SALE!</span></h5>
+                                  <h6 class="card-subtitle mb-2 text-body-secondary">15.99$</h6>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <button class="btn btn-primary" onclick="addToCart()"> Add to Cart</button>
+                                  <button class="btn btn-success" onclick="checkoutProceed()"> Checkout</button>
+                                </div>
+                              </div>    
+                        </div>
+                        <div class="col-2">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://media.istockphoto.com/id/1428728626/photo/young-man-with-tattoos-near-brick-wall.webp?s=2048x2048&w=is&k=20&c=8QeYkbetVN0Q55TOQ6wYasLnJle8ajrKjlu4HNecETs=" class="card-img-top" alt="black t shirt image">
+                                <div class="card-body">
+                                  <h5 class="card-title">Black T-Shirt <span class="badge text-bg-danger">SALE!</span></h5>
+                                  <h6 class="card-subtitle mb-2 text-body-secondary">15.99$</h6>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <button class="btn btn-primary" onclick="addToCart()"> Add to Cart</button>
+                                  <button class="btn btn-success" onclick="checkoutProceed()"> Checkout</button>
+                                </div>
+                              </div>    
+                        </div>
+                    </div> -->
