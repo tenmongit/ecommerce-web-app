@@ -34,6 +34,11 @@ div h1 {
     color: #385170;
 }
 
+.card {
+    height:300px;
+}
+
+
 
 /* Footer Styles */
 footer {
@@ -43,4 +48,7 @@ footer {
     text-align: center;
     color: #ececec;
     background-color: #142d4c;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
 }
