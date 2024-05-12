@@ -41,16 +41,28 @@ const products = [
     imageAlt: 'black tie image',
     description: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
     },
-    { name: 'Product 1', 
-    price: '100.00$',
-    imageUrl: 'resources/images/product1.jpg', 
-    imageAlt: 'product 1 image',
+    { name: 'Black Shoes', 
+    price: '85$',
+    imageUrl: 'resources/images/black-shoes.jpg',  
+    imageAlt: 'black shoes image',
     description: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
     },
-    { name: 'Product 2', 
-    price: '100.00$',
-    imageUrl: 'resources/images/product2.jpg', 
-    imageAlt: 'product 2 image',
+    { name: 'White Shoes', 
+    price: '99.99$',
+    imageUrl: 'resources/images/white-shoes.jpg', 
+    imageAlt: 'white shoes image',
+    description: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
+    },
+    { name: 'Black Trunks', 
+    price: '12$',
+    imageUrl: 'resources/images/black-trunks.jpg', 
+    imageAlt: 'white shoes image',
+    description: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
+    },
+    { name: 'White Trunks', 
+    price: '12$',
+    imageUrl: 'resources/images/white-trunks.jpg', 
+    imageAlt: 'white trunks image',
     description: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
     },
 ]
@@ -80,8 +92,8 @@ function generateProductCards(products, showSaleProducts) {
                 <div class="card h-100" style="width: 18rem;">
                     <img src="${product.imageUrl}" class="card-img-top" alt="${product.imageAlt}" style="width: 100%; height: 400px;">
                     <div class="card-body">
-                        <h5 class="card-title">${product.name}<span class="badge text-bg-danger">SALE!</span><strong>${product.salePrice}</strong></h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary"><s>${product.price}</s></h6>
+                        <h5 class="card-title">${product.name}</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary"> ${product.price}</h6>
                         <p class="card-text">${product.description}</p>
                         <div class="card-footer">
                             <button class="btn btn-primary" onclick="addToCart()"> Add to Cart</button>
@@ -114,4 +126,4 @@ const checkoutProceed = () => {
     showAlert('checkoutAlert');
 }
 
-window.onload = generateProductCards(products, true);
+window.onload = generateProductCards(products, false);
