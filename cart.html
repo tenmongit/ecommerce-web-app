@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8"/>
@@ -25,13 +26,13 @@
                                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="cart.html">Cart</a>
+                                <a class="nav-link" href="#">Cart</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Catalogue</a>
+                                <a class="nav-link" href="catalogue.html">Catalogue</a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
@@ -46,33 +47,21 @@
         </header>
         <main>
             <div class="container">
-                <!-- alert for adding to the cart -->
-                <div class="alert alert-success alert-dismissible fade show" id="addToCartAlert" style="display: none" role="alert">
-                    <strong>Added to Cart!</strong> Your item is added to the cart.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <!-- alert for deleting from the cart-->
-                <div class="alert alert-success alert-dismissible fade show" id="checkoutAlert" style="display: none" role="alert">
-                    <strong>Checkout page is opened in new window!</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <!-- starting layout for home page-->
-                <div class="row">
-                    <div class="col-12">    
-                    <h1 class="display-3">Our Catalogue</h1>
+                
+                <h1 class="display-3">Your Cart</h1>
+                <div class="container">
+                    <div class ="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 g-4" id="cart-items-container">
+
+                    </div>
+
+                    <div class="total-price-container">
+                        <h4 class="display-5"><span id="total-price"></span></h4>
+                    </div>
+                    <div class="checkout-button-container">
+                        <button class="btn btn-success" onclick="proceedToCheckout()">Proceed to Checkout</button>
                     </div>
                 </div>
-                    <button type="button" class="btn btn-primary position-relative">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="count">
-                        0
-                        <span class="visually-hidden">unread messages</span>
-                        </span>
-                    </button>
-                    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 g-4" id="productContainer">
-                     
-                    </div>
-            </div>    
+            </div>
         </main>
         <footer>
             <div>
@@ -95,7 +84,8 @@
             </div>
         </footer>
         <script src="https://kit.fontawesome.com/d8096dae26.js" crossorigin="anonymous"></script>
-        <script src="resources/scripts/script.js"></script>
+        <script src="resources/scripts/script.js" defer></script>
+        <script src="resources/scripts/cart.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
