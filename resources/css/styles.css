@@ -1,11 +1,22 @@
 /* General Styles */
 
 html {
+    height: 100%;
     font-family: "Ubuntu Sans", sans-serif;
     font-size: 62.5%;
     background-color: rgb(236,236,236);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
 /* Nav Styles */
 
 nav {

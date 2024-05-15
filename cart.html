@@ -29,7 +29,7 @@
                                 <a class="nav-link" href="#">Cart</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Login</a>
+                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" id="login-link">Login</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="catalogue.html">Catalogue</a>
@@ -58,14 +58,53 @@
                         <h4 class="display-5"><span id="total-price"></span></h4>
                     </div>
                     <div class="checkout-button-container">
-                        <button class="btn btn-success" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                        <button class="btn btn-success" onclick="checkoutProceed()">Proceed to Checkout</button>
                     </div>
                 </div>
             </div>
         </main>
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-4 shadow">
+                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <h1 class="fw-bold mb-0 fs-2" id="loginModalLabel" id="login-link">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body p-5 pt-0">
+                        <form class="needs-validation" id="loginForm">
+                            <div class="form-floating mb-3">
+                                <input id="floatingInput" type="email" class="form-control rounded-3" placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                            <button type="submit" class="btn btn-lg w-100 mb-2 btn-primary">Login</button>
+                            <hr class="my-4">
+                            <h2 class="fs-5 fw-bold text-body-secondary mb-3">Or use a third-party</h2>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                                <i class="fab fa-google"></i>
+                                Sign up with Gmail
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                                <i class="fab fa-facebook-f"></i>
+                                Sign up with Facebook
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                                <i class="fab fa-twitter"></i>
+                                Sign up with Twitter
+                            </button>
+                        </form>
+                        <div class="d-flex justify-content-center">
+                            <p>Don't have an account? <a href="registration.html">Register</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer>
-            <div>
-                <div class="container-fluid">
+            <div class="container">
                     <div class="row">
                         <div class="col-6">
                             <h5>Contact Us</h5>
@@ -80,7 +119,6 @@
                             <a href="#"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
-                </div>
             </div>
         </footer>
         <script src="https://kit.fontawesome.com/d8096dae26.js" crossorigin="anonymous"></script>

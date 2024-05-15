@@ -273,6 +273,44 @@ const checkoutProceed = () => {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Get user input from form fields
+        const email = document.getElementById('floatingInput').value;
+        const password = document.getElementById('floatingPassword').value;
+
+        // Check if the credentials match the admin account
+        if(email === 'admin@example.com' && password === 'admin') {
+            // Redirect to the profile page
+            localStorage.setItem('isLoggedIn', 'true'); // Set the 'isLoggedIn' flag to 'true
+            window.location.href = 'profile.html';
+        } else {
+            // Show an error message or handle invalid credentials
+            alert('Invalid credentials. Please try again.');
+        }
+    });
+});
+
+
+
+function updateLoginLink() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (isLoggedIn === 'true') {
+        const loginLink = document.getElementById('login-link'); // Ensure your login link has this ID
+        if (loginLink) {
+            loginLink.textContent = 'Profile';
+            loginLink.href = 'profile.html'; // Assuming 'profile.html' is your profile page
+            // Optionally, remove attributes related to modal if they exist
+            loginLink.removeAttribute('data-bs-toggle');
+            loginLink.removeAttribute('data-bs-target');
+        }
+    }
+}
+
+
 window.onload = function() {
     // Determine the current page (this is a conceptual example)
     let currentPage = window.location.pathname.split("/").pop();
@@ -285,4 +323,6 @@ window.onload = function() {
         // For 'index.html', show products with salePrice
         generateProductCards(products, true);
     }
+
+    updateLoginLink();
 };

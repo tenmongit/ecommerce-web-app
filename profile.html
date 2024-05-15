@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8"/>
@@ -31,7 +32,7 @@
                                 <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" id="login-link">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Catalogue</a>
+                                <a class="nav-link" href="catalogue.html">Catalogue</a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
@@ -45,34 +46,7 @@
             </div>
         </header>
         <main>
-            <div class="container">
-                <!-- alert for adding to the cart -->
-                <div class="alert alert-success alert-dismissible fade show" id="addToCartAlert" style="display: none" role="alert">
-                    <strong>Added to Cart!</strong> Your item is added to the cart.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <!-- alert for deleting from the cart-->
-                <div class="alert alert-success alert-dismissible fade show" id="checkoutAlert" style="display: none" role="alert">
-                    <strong>Checkout page is opened in new window!</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <!-- starting layout for home page-->
-                <div class="row">
-                    <div class="col-12">    
-                    <h1 class="display-3">Our Catalogue</h1>
-                    </div>
-                </div>
-                    <button type="button" class="btn btn-primary position-relative">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="count">
-                        0
-                        <span class="visually-hidden">unread messages</span>
-                        </span>
-                    </button>
-                    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 g-4" id="productContainer">
-                     
-                    </div>
-            </div>    
+
         </main>
         <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -91,7 +65,7 @@
                                 <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
                                 <label for="floatingPassword">Password</label>
                             </div>
-                            <button type="submit" class="btn btn-lg w-100 mb-2 btn-primary" id="login-link">Login</button>
+                            <button type="submit" class="btn btn-lg w-100 mb-2 btn-primary">Login</button>
                             <hr class="my-4">
                             <h2 class="fs-5 fw-bold text-body-secondary mb-3">Or use a third-party</h2>
                             <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
@@ -134,8 +108,8 @@
                 </div>
             </div>
         </footer>
-        <script src="https://kit.fontawesome.com/d8096dae26.js" crossorigin="anonymous"></script>
         <script src="resources/scripts/script.js"></script>
+        <script src="https://kit.fontawesome.com/d8096dae26.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

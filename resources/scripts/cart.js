@@ -6,10 +6,10 @@ function updateTotalPrice() {
         totalPrice += price * product.quantity;
     })
 
-    document.getElementById('total-price').innerHTML = `Total Price: $${totalPrice.toFixed(2)}`;
+    document.getElementById('total-price').innerHTML = `Total (USD)${totalPrice.toFixed(2)}`;
 }
 
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
     displayCartItems();
     updateTotalPrice();
-}
+});
