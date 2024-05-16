@@ -326,3 +326,13 @@ window.onload = function() {
 
     updateLoginLink();
 };
+
+document.getElementById('logout-button').addEventListener('click', function(e) {
+
+    // Clear user session or local storage
+    localStorage.removeItem('isLoggedIn'); // Adjust this line based on how you're tracking logged-in status
+
+    // Redirect to the login page or home page
+    window.location.href = 'index.html'; // Adjust the redirection URL as needed
+});
+
