@@ -58,6 +58,25 @@ function updateTotalCheckout() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    const checkoutForm = document.getElementById('checkoutForm');
+    checkoutForm.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        processCheckout();
+    });
+});
+
+function processCheckout() {
+    const expirationDate = document.getElementById('cc-expiration').value;
+
+    if (expirationDate === "09/28") {
+        window.location.href = 'checkout-success.html';
+    } else {
+        window.location.href = 'checkout-fail.html';
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
     displayCartItemsCheckout();
     updateTotalCheckout();
 });
